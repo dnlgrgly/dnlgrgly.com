@@ -18,11 +18,11 @@ const paragraphStyles = {
 };
 
 // markup
-const Home = () => {
+const Budipest = () => {
   return (
     <main style={pageStyles}>
-      <title>Home | dnlgrgly</title>
-      <h1 style={headingStyles}>Home</h1>
+      <title>Budipest | dnlgrgly</title>
+      <h1 style={headingStyles}>Budipest</h1>
       <p style={paragraphStyles}>
         <span role="img" aria-label="Construction emoji">
           🚧
@@ -37,4 +37,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Budipest;

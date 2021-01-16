@@ -1,40 +1,11 @@
 import * as React from "react";
+import Placeholder from "../components/Placeholder";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
+const IndexPage = () => (
+  <Placeholder
+    title="under construction"
+    subtitle="this page is still nothing but a construction site. check back later."
+  />
+);
 
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
-
-// markup
-const Home = () => {
-  return (
-    <main style={pageStyles}>
-      <title>Home | dnlgrgly</title>
-      <h1 style={headingStyles}>Home</h1>
-      <p style={paragraphStyles}>
-        <span role="img" aria-label="Construction emoji">
-          🚧
-        </span>
-        This page is under construction.
-        <span role="img" aria-label="Construction emoji">
-          🚧
-        </span>
-      </p>
-      <p stlye={paragraphStyles}>Please check back later.</p>
-    </main>
-  );
-};
-
-export default Home;
+export default IndexPage;

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="266" height="89" viewBox="0 0 266 89">
+  <g id="Group_39" data-name="Group 39" transform="translate(-136 -149)">
+    <path id="Path_47" data-name="Path 47" d="M14-25.2V-8.4H25.2V-25.2ZM8.4-2.8V-8.4H2.8V-25.2H8.4v-5.6H25.2V-47.6H36.4V-2.8ZM75.6-25.2V-2.8H64.4V-25.2H53.2V-2.8H42v-28H70v5.6ZM86.8-2.8V-8.4H81.2V-47.6H92.4V-8.4H98v5.6Zm16.8-5.6V-14h5.6v5.6Zm28-22.4v-5.6h5.6v5.6Zm0,22.4v5.6h5.6V8.4h-5.6V14H109.2V8.4h-5.6V-2.8h5.6V-8.4ZM109.2-19.6h-5.6v-5.6h5.6v-5.6h22.4v5.6h5.6v5.6h-5.6V-14H109.2Zm5.6-5.6v5.6H126v-5.6Zm0,22.4V8.4H126V-2.8Zm39.2,0H142.8V-25.2h5.6v-5.6h16.8v5.6H154Zm16.8-5.6V-14h5.6v5.6Zm28-22.4v-5.6h5.6v5.6Zm0,22.4v5.6h5.6V8.4h-5.6V14H176.4V8.4h-5.6V-2.8h5.6V-8.4ZM176.4-19.6h-5.6v-5.6h5.6v-5.6h22.4v5.6h5.6v5.6h-5.6V-14H176.4Zm5.6-5.6v5.6h11.2v-5.6Zm0,22.4V8.4h11.2V-2.8Zm33.6,0V-8.4H210V-47.6h11.2V-8.4h5.6v5.6Zm39.2,0H238V-8.4h-5.6V-30.8h11.2V-8.4h11.2V-30.8H266V8.4h-5.6V14H238V8.4h-5.6V2.8h11.2V8.4h11.2Z" transform="translate(136 224)"/>
+    <rect id="Rectangle_47" data-name="Rectangle 47" width="42" height="8" transform="translate(136 149)" fill="#e20d17"/>
+    <rect id="Rectangle_48" data-name="Rectangle 48" width="42" height="8" transform="translate(178 149)" fill="#fb9325"/>
+    <rect id="Rectangle_49" data-name="Rectangle 49" width="42" height="8" transform="translate(220 149)" fill="#f7d830"/>
+    <rect id="Rectangle_50" data-name="Rectangle 50" width="42" height="8" transform="translate(262 149)" fill="#5cccc8"/>
+  </g>
+</svg>

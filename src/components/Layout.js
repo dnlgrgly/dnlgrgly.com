@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 import LogoWhite from "../images/logo-white.svg";
@@ -10,31 +11,46 @@ const Navbar = styled.div`
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+  height: 6rem;
+
+  ${({ theme, showGradient }) =>
+    showGradient &&
+    `
+    background: linear-gradient(
+      180deg,
+      ${theme.color.background},
+      transparent
+    );
+  `}
 `;
 
 const Logo = styled.img`
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
   width: 10rem;
 
-  @media ${(props) => props.theme.device.tablet} {
-    top: 2rem;
-    left: 2rem;
-  }
-
-  @media ${(props) => props.theme.device.laptop} {
-    top: 4rem;
-    left: 4rem;
-  }
+  ${({ showGradient }) =>
+    showGradient &&
+    `
+    margin-top: 1rem;
+  `}
 `;
 
-const Layout = ({ children, title, isDark }) => {
+const Layout = ({
+  children,
+  isDark = false,
+  showNavigation = true,
+  showGradient = true,
+}) => {
   return (
     <main>
       <GlobalStyle />
-      <Navbar>
-        <Logo src={isDark ? LogoBlack : LogoWhite} alt="dnlgrgly logo" />
+      <Navbar showGradient={showGradient}>
+        <Link to="/">
+          <Logo
+            src={isDark ? LogoBlack : LogoWhite}
+            showGradient={showGradient}
+            alt="dnlgrgly logo"
+          />
+        </Link>
       </Navbar>
       {children}
     </main>

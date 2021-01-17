@@ -2,10 +2,21 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   :root {
-    background-color: #280003;
-    color: white;
+    background-color: ${(props) => props.theme.color.background};
     font-family: Circular Std, sans-serif;
     font-display: fallback;
+  }
+
+  main {
+    padding: 2rem 1rem;
+
+    @media ${(props) => props.theme.device.tablet} {
+      padding: 4rem 2rem;
+    }
+
+    @media ${(props) => props.theme.device.laptop} {
+      padding: 4rem 4rem;
+    }
   }
 
   * {
@@ -20,8 +31,8 @@ export default createGlobalStyle`
   }
 
   body {
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     line-height: 1;
   }
 

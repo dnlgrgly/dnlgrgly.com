@@ -64,7 +64,7 @@ const TextWrapper = styled.div`
 `;
 
 const Placeholder = ({ title, subtitle }) => (
-  <Layout isDark={true}>
+  <Layout isDark={true} showGradient={false}>
     <BackgroundStyle />
     <TextWrapper>
       <h1>{title}</h1>

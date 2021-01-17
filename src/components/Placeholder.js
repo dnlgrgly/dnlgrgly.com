@@ -41,19 +41,15 @@ const TextWrapper = styled.div`
   max-width: 100%;
 
   @media ${(props) => props.theme.device.mobileM} {
-    max-width: 80%;
+    max-width: 90%;
   }
 
   @media ${(props) => props.theme.device.mobileL} {
-    max-width: 70%;
+    max-width: 80%;
   }
 
   @media ${(props) => props.theme.device.tablet} {
     margin: 0 2rem;
-    max-width: 50%;
-  }
-
-  @media ${(props) => props.theme.device.tablet} {
     max-width: 50%;
   }
 
@@ -64,7 +60,7 @@ const TextWrapper = styled.div`
 `;
 
 const Placeholder = ({ title, subtitle }) => (
-  <Layout isDark={true} showGradient={false}>
+  <Layout title={title} isDark={true} showGradient={false}>
     <BackgroundStyle />
     <TextWrapper>
       <h1>{title}</h1>

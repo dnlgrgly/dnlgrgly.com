@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
+import Helmet from "react-helmet";
 import styled from "styled-components";
 
 import LogoWhite from "../images/logo-white.svg";
@@ -35,6 +36,7 @@ const Logo = styled.img`
 `;
 
 const Layout = ({
+  title,
   children,
   isDark = false,
   showNavigation = true,
@@ -42,6 +44,9 @@ const Layout = ({
 }) => {
   return (
     <main>
+      <Helmet>
+        <title>{`${title} | dnlgrgly`}</title>
+      </Helmet>
       <GlobalStyle />
       <Navbar showGradient={showGradient}>
         <Link to="/">

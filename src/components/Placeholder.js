@@ -2,7 +2,7 @@ import * as React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import background from "../images/placeholder.png";
 
-import Container from "./Container";
+import Layout from "./Layout.js";
 
 const BackgroundStyle = createGlobalStyle`
   body {
@@ -17,34 +17,60 @@ const BackgroundStyle = createGlobalStyle`
     color: black;
   }
 
-  h2 {
+  h3 {
     color: #21495c;
   }
 
   h1,
-  h2 {
+  h3 {
     text-align: right;
   }
 `;
 
 const TextWrapper = styled.div`
-  margin: 0;
-  right: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  max-width: 45%;
+
+  right: 0;
+  margin: 0 1rem;
+  max-width: 100%;
+
+  @media ${(props) => props.theme.device.mobileM} {
+    max-width: 80%;
+  }
+
+  @media ${(props) => props.theme.device.mobileL} {
+    max-width: 70%;
+  }
+
+  @media ${(props) => props.theme.device.tablet} {
+    margin: 0 2rem;
+    max-width: 50%;
+  }
+
+  @media ${(props) => props.theme.device.tablet} {
+    max-width: 50%;
+  }
+
+  @media ${(props) => props.theme.device.laptop} {
+    margin: 0 4rem;
+    max-width: 40%;
+  }
 `;
 
 const Placeholder = ({ title, subtitle }) => (
-  <Container isDark={true}>
+  <Layout isDark={true}>
     <BackgroundStyle />
     <TextWrapper>
       <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+      <h3>{subtitle}</h3>
     </TextWrapper>
-  </Container>
+  </Layout>
 );
 
 export default Placeholder;

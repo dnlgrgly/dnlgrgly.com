@@ -157,6 +157,7 @@ const Layout = ({
         <div>
           <h4>social</h4>
           <a href="https://linkedin.com/in/dnlgrgly">LinkedIn</a>
+          <a href="https://github.com/dnlgrgly">GitHub</a>
           <a href="https://t.me/dnlgrgly">Telegram</a>
           <a href="mailto:dnlgrgly@gmail.com">email</a>
         </div>

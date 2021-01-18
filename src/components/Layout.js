@@ -6,6 +6,10 @@ import styled from "styled-components";
 import LogoWhite from "../images/logo-white.svg";
 import LogoBlack from "../images/logo-black.svg";
 
+import DefaultThumbnail from "../images/thumbnails/default.png";
+import BudipestThumbnail from "../images/thumbnails/budipest.png";
+import RiddimfutarThumbnail from "../images/thumbnails/riddimfutar.png";
+
 import GlobalStyle from "../styles/globalStyle.js";
 
 const Spacer = styled.div`
@@ -41,8 +45,21 @@ const Logo = styled.img`
   `}
 `;
 
+const findThumbnail = (name) => {
+  switch(name) {
+    case "budipest":
+      return <meta property="og:image" content={BudipestThumbnail} />
+    case "riddimfutar":
+      return <meta property="og:image" content={RiddimfutarThumbnail} />
+    default:
+      return <meta property="og:image" content={DefaultThumbnail} />
+  }
+}
+
 const Layout = ({
   title,
+  description = "Hi! I'm Daniel Gergely, a full-stack web and mobile engineer + a designer-ish.",
+  thumbnail = "default",
   children,
   isDark = false,
   showNavigation = true,
@@ -52,6 +69,9 @@ const Layout = ({
     <main>
       <Helmet>
         <title>{`${title} | dnlgrgly`}</title>
+        <description>{description}</description>
+        <canonical>https://dnlgrgly.com</canonical>
+        {findThumbnail(thumbnail)}
       </Helmet>
       <GlobalStyle />
       <Spacer />

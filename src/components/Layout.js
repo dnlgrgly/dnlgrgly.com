@@ -17,7 +17,7 @@ const Spacer = styled.div`
 `;
 
 const Navbar = styled.div`
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 10rem;
@@ -37,12 +37,7 @@ const Navbar = styled.div`
 
 const Logo = styled.img`
   width: 10rem;
-
-  ${({ showGradient }) =>
-    showGradient &&
-    `
-    margin-top: 1rem;
-  `}
+  margin-top: 1rem;
 `;
 
 const Footer = styled.footer`
@@ -115,7 +110,6 @@ const Layout = ({
           <Link to="/">
             <Logo
               src={isDark ? LogoBlack : LogoWhite}
-              showGradient={showGradient}
               alt="dnlgrgly logo"
             />
           </Link>
@@ -126,7 +120,6 @@ const Layout = ({
         <div className="s">
           <Logo
             src={LogoWhite}
-            showGradient={showGradient}
             alt="dnlgrgly logo"
           />
           <b>Copyright 2021</b>

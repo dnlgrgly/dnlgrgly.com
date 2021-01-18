@@ -52,12 +52,14 @@ export default createGlobalStyle`
   a {
     background-color: transparent;
     text-decoration: none;
+    color: ${(props) => props.theme.color.foreground};
   }
 
   a:active,
   a:hover {
     outline: 0;
     text-decoration: none;
+    color: white;
   }
 
   b {

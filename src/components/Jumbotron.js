@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 
   @media ${(props) => props.theme.device.tablet} {
     margin-top: -10rem;
-    height: calc(100vh - 2rem);
   }
 
   .left,

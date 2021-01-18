@@ -59,6 +59,10 @@ const TextWrapper = styled.div`
   }
 `;
 
+const Spacer = styled.div`
+  height: calc(100vh - 2rem);
+`;
+
 const Placeholder = ({ title, subtitle }) => (
   <Layout title={title} isDark={true} showGradient={false}>
     <BackgroundStyle />
@@ -66,6 +70,7 @@ const Placeholder = ({ title, subtitle }) => (
       <h1>{title}</h1>
       <h3>{subtitle}</h3>
     </TextWrapper>
+    <Spacer/>
   </Layout>
 );
 

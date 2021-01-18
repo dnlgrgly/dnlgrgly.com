@@ -1,16 +1,25 @@
 import * as React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import background from "../images/placeholder.png";
 
 import Layout from "./Layout.js";
 
-const BackgroundStyle = createGlobalStyle`
+const Wrapper = styled.div`
+  height: 100vh;
+  margin-top: -12rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-image: url(${background});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #b3e5fc;
+  background-position: center bottom;
+
   body {
-    background-image: url(${background});
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #B3E5FC;
-    background-position: center bottom;
+    background-color: #b3e5fc;
   }
 
   h1 {
@@ -31,12 +40,7 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 
-  right: 0;
   margin: 0 1rem;
   max-width: 100%;
 
@@ -59,18 +63,14 @@ const TextWrapper = styled.div`
   }
 `;
 
-const Spacer = styled.div`
-  height: calc(100vh - 2rem);
-`;
-
 const Placeholder = ({ title, subtitle }) => (
   <Layout title={title} isDark={true} showGradient={false}>
-    <BackgroundStyle />
-    <TextWrapper>
-      <h1>{title}</h1>
-      <h3>{subtitle}</h3>
-    </TextWrapper>
-    <Spacer/>
+    <Wrapper>
+      <TextWrapper>
+        <h1>{title}</h1>
+        <h3>{subtitle}</h3>
+      </TextWrapper>
+    </Wrapper>
   </Layout>
 );
 

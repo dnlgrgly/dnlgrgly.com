@@ -9,10 +9,6 @@ const Wrapper = styled.div`
   height: calc(100vh - 2rem);
   width: 100%;
 
-  @media ${(props) => props.theme.device.tablet} {
-    margin-top: -10rem;
-  }
-
   .left,
   .right {
     display: flex;

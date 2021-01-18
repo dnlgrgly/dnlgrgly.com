@@ -7,7 +7,7 @@ export default createGlobalStyle`
     font-display: fallback;
   }
 
-  main {
+  .padding {
     padding: 2rem 1rem;
 
     @media ${(props) => props.theme.device.tablet} {
@@ -84,7 +84,11 @@ export default createGlobalStyle`
     font-feature-settings: "liga" on;
   }
 
-  h1 {
+  i {
+    font-style: italic;
+  }
+
+  h1, h1 > * {
     color: #fff;
     font-size: 2.5rem;
     font-weight: 600;
@@ -97,6 +101,8 @@ export default createGlobalStyle`
   }
 
   h2 {
+    color: #fff;
+    font-family: d0GBYTe, sans-serif;
     font-weight: 300;
     font-size: 2rem;
     @media ${(props) => props.theme.device.tablet} {
@@ -119,7 +125,8 @@ export default createGlobalStyle`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     color: ${(props) => props.theme.color.foreground};
   }
 

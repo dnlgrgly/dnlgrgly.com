@@ -8,11 +8,17 @@ import LogoBlack from "../images/logo-black.svg";
 
 import GlobalStyle from "../styles/globalStyle.js";
 
+const Spacer = styled.div`
+  height: 2rem;
+`;
+
 const Navbar = styled.div`
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  height: 6rem;
+  height: 10rem;
+  padding-top: 0;
+  padding-bottom: 0;
 
   ${({ theme, showGradient }) =>
     showGradient &&
@@ -48,7 +54,8 @@ const Layout = ({
         <title>{`${title} | dnlgrgly`}</title>
       </Helmet>
       <GlobalStyle />
-      <Navbar showGradient={showGradient}>
+      <Spacer />
+      <Navbar className="padding" showGradient={showGradient}>
         <Link to="/">
           <Logo
             src={isDark ? LogoBlack : LogoWhite}

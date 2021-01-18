@@ -36,8 +36,13 @@ const Navbar = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 10rem;
   margin-top: 1rem;
+
+  width: 8rem;
+
+  @media ${(props) => props.theme.device.tablet} {
+    width: 10rem;
+  }
 `;
 
 const Footer = styled.footer`
@@ -45,23 +50,46 @@ const Footer = styled.footer`
   width: 100%;
   background-color: ${(props) => props.theme.color.background};
 
+  flex-direction: column;
+
+  @media ${(props) => props.theme.device.tablet} {
+    flex-direction: row;
+  }
+
   a,
   b,
   p {
-    font-size: 0.9rem;
-    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+
+    @media ${(props) => props.theme.device.tablet} {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
   }
 
   img {
-    width: 4rem;
-    margin: 0 0 0.5rem 0;
+    width: 8rem;
+    margin: 0 0 1rem 0;
+
+    @media ${(props) => props.theme.device.tablet} {
+      width: 4rem;
+      margin: 0 0 0.5rem 0;
+    }
   }
 
   h4 {
     color: #fff;
     font-family: d0GBYTe, sans-serif;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1rem;
+
+    @media ${(props) => props.theme.device.tablet} {
+      font-size: 1.1rem;
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
   }
 
   > div {
@@ -71,7 +99,9 @@ const Footer = styled.footer`
   }
 
   .flex-2 {
-    flex: 2;
+    @media ${(props) => props.theme.device.laptop} {
+      flex: 2;
+    }
   }
 `;
 
@@ -108,20 +138,14 @@ const Layout = ({
         <Spacer />
         <Navbar className="padding" showGradient={showGradient}>
           <Link to="/">
-            <Logo
-              src={isDark ? LogoBlack : LogoWhite}
-              alt="dnlgrgly logo"
-            />
+            <Logo src={isDark ? LogoBlack : LogoWhite} alt="dnlgrgly logo" />
           </Link>
         </Navbar>
         {children}
       </main>
       <Footer className="padding">
-        <div className="s">
-          <Logo
-            src={LogoWhite}
-            alt="dnlgrgly logo"
-          />
+        <div className="flex-2">
+          <Logo src={LogoWhite} alt="dnlgrgly logo" />
           <b>Copyright 2021</b>
           <p>Dániel Gergely</p>
         </div>

@@ -15,7 +15,6 @@ import Form from "../components/Form";
 import Jumbotron from "../components/Jumbotron.js";
 import Layout from "../components/Layout.js";
 
-
 const Button = styled.a`
   font-family: d0GBYTe, sans-serif;
   font-size: 1.5rem;
@@ -188,18 +187,29 @@ const IndexPage = () => (
       <div className="dividor" />
       <h2 id="projects">projects</h2>
       <p>
-        Lórum ipse komonár mindig tarol valamilyen ronás csúnyost: unkát,
-        tetéket, bazmust, akármit. Jelen rázás tehát a sanyag istság ma pinált
-        stalója.
+        Ranging from mobile, web and full-stack solutions, I've crafted several
+        out-of-this-world projects in my lifetime so far. Below, you can find
+        the projects I'm the proudest of.{" "}
+        <span role="img" aria-label="heart emoji">
+          ❤️
+        </span>
       </p>
     </Container>
     <Container color="yellow" className="padding">
       <div className="dividor" />
-      <h2 id="tutorials">tutorials</h2>
+      <h2 id="articles">articles & tutorials</h2>
       <p>
-        Lórum ipse komonár mindig tarol valamilyen ronás csúnyost: unkát,
-        tetéket, bazmust, akármit. Jelen rázás tehát a sanyag istság ma pinált
-        stalója.
+        "Give a man a fish, you feed a them for a day; teach a man to fish, you
+        feed them for a life." <br />
+        Giving back to the community is always an important part of the
+        developer lifestyle. And there's no better way to help out fellow
+        developers than teaching them, and letting them grow. By writing
+        articles, crafting open-source projects, or giving mind-blowing meetup
+        talks, I've always tried to be an active part of the community. Below, I
+        listed the resources I've created and I think are amazing.{" "}
+        <span role="img" aria-label="book emoji">
+          📖
+        </span>
       </p>
     </Container>
     <Container color="cyan" className="padding">

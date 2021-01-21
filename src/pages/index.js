@@ -146,8 +146,9 @@ const IndexPage = () => (
             <br />I love working on extraordinary and non-usual projects, and
             I'm a very motivated learner. I craft designs with Adobe XD, mobile
             apps with Flutter and React-Native, websites with React and Gatsby,
-            backends with Node.JS, REST, GraphQL and mongoDB, and I'm also
-            learning Python.{" "}
+            backends with Node.JS, REST, GraphQL and mongoDB. I host them on
+            Heroku, GCP, AWS, Netlify, or whatever comes to mind. Oh, and I'm
+            also learning Python.{" "}
             <span role="img" aria-label="snake emoji">
               🐍
             </span>

@@ -128,7 +128,7 @@ export default createGlobalStyle`
 
   p {
     font-size: 1.1rem;
-    line-height: 1.3rem;
+    line-height: 1.6rem;
     color: ${(props) => props.theme.color.foreground};
   }
 

@@ -156,8 +156,8 @@ const Layout = ({
         </div>
         <div>
           <h4>projects</h4>
-          <a href="https://dnlgrgly.com/budipest">Budipest</a>
-          <a href="https://dnlgrgly.com/riddimfutar">RIDDIMFUTÁR</a>
+          <Link to="/budipest">Budipest</Link>
+          <Link href="/riddimfutar">RIDDIMFUTÁR</Link>
         </div>
         <div>
           <h4>social</h4>
@@ -168,7 +168,7 @@ const Layout = ({
         </div>
         <div>
           <h4>other</h4>
-          <a href="/privacy">Privacy Policy</a>
+          <Link to="/privacy">Privacy Policy</Link>
         </div>
       </Footer>
     </>

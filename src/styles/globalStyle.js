@@ -136,4 +136,16 @@ export default createGlobalStyle`
     color: ${(props) => props.theme.color.background};
     background: ${(props) => props.theme.color.foreground};
   }
+
+  .flex-3 {
+    flex: 3;
+  }
+
+  .flex-2 {
+    flex: 2;
+  }
+
+  .flex-1 {
+    flex: 1;
+  }
 `;

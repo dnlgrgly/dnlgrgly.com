@@ -45,16 +45,22 @@ const FormWrapper = styled.form`
 `;
 
 const Form = ({ leftColumn, rightColumn }) => (
-  <FormWrapper name="contact" method="POST" data-netlify="true">
+  <FormWrapper
+    name="Contact Form"
+    method="POST"
+    data-netlify="true"
+    action="/thanks"
+  >
     <div>
       <label>
-        Your Name: <input type="text" name="name" placeholder="Péter Árvai" />
+        Your Name:{" "}
+        <input type="text" name="name" placeholder="Richard Hendricks" />
       </label>
     </div>
     <div>
       <label>
         Your Email:{" "}
-        <input type="email" name="email" placeholder="ceo@prezi.com" />
+        <input type="email" name="email" placeholder="ceo@piedpiper.com" />
       </label>
     </div>
     <div>
@@ -62,7 +68,7 @@ const Form = ({ leftColumn, rightColumn }) => (
         Message:{" "}
         <textarea
           name="message"
-          placeholder="Hello Daniel, I've got an awesome opportunity waiting just for you..."
+          placeholder="Hello Daniel, I've got an awesome opportunity waiting just for you in our SF office..."
         />
       </label>
     </div>

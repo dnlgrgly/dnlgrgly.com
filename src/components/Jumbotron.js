@@ -34,7 +34,7 @@ const Wrapper = styled.div`
     }
   }
 
-  img {
+  img, svg {
     width: 60%;
     margin: auto 15% auto 25%;
 

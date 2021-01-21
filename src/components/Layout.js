@@ -30,7 +30,7 @@ const Navbar = styled.div`
     background: linear-gradient(
       180deg,
       ${theme.color.background},
-      transparent
+      ${theme.color.backgroundTrans}
     );
   `}
 

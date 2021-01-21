@@ -108,18 +108,6 @@ const Container = styled.div`
       height: auto;
     }
   }
-
-  .flex-3 {
-    flex: 3;
-  }
-
-  .flex-2 {
-    flex: 2;
-  }
-
-  .flex-1 {
-    flex: 1;
-  }
 `;
 
 const IndexPage = () => (

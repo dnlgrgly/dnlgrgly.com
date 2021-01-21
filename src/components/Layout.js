@@ -3,8 +3,8 @@ import { Link } from "gatsby";
 import Helmet from "react-helmet";
 import styled from "styled-components";
 
-import LogoWhite from "../images/logo-white.svg";
-import LogoBlack from "../images/logo-black.svg";
+import LogoWhite from "../images/svg/logo-white.svg";
+import LogoBlack from "../images/svg/logo-black.svg";
 
 import DefaultThumbnail from "../images/thumbnails/default.png";
 import BudipestThumbnail from "../images/thumbnails/budipest.png";
@@ -33,15 +33,15 @@ const Navbar = styled.div`
       transparent
     );
   `}
-`;
 
-const Logo = styled.img`
-  margin-top: 1rem;
+  svg {
+    margin-top: 1rem;
 
-  width: 8rem;
+    width: 8rem;
 
-  @media ${(props) => props.theme.device.tablet} {
-    width: 10rem;
+    @media ${(props) => props.theme.device.tablet} {
+      width: 10rem;
+    }
   }
 `;
 
@@ -68,8 +68,9 @@ const Footer = styled.footer`
     }
   }
 
-  img {
+  svg {
     width: 8rem;
+    height: auto;
     margin: 0 0 1rem 0;
 
     @media ${(props) => props.theme.device.tablet} {
@@ -138,14 +139,18 @@ const Layout = ({
         <Spacer />
         <Navbar className="padding" showGradient={showGradient}>
           <Link to="/">
-            <Logo src={isDark ? LogoBlack : LogoWhite} alt="dnlgrgly logo" />
+            {isDark ? (
+              <LogoBlack alt="dnlgrgly logo" />
+            ) : (
+              <LogoWhite alt="dnlgrgly logo" />
+            )}
           </Link>
         </Navbar>
         {children}
       </main>
       <Footer className="padding">
         <div className="flex-2">
-          <Logo src={LogoWhite} alt="dnlgrgly logo" />
+          <LogoWhite alt="dnlgrgly logo" />
           <b>Copyright 2021</b>
           <p>Dániel Gergely</p>
         </div>

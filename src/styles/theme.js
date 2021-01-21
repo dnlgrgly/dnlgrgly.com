@@ -29,8 +29,9 @@ export default {
     cyanFg: "#CCFAF8",
 
     // other colors
-    background: "#280003",
-    foreground: "#EDCCCE"
+    background: "rgba(40, 0, 3, 1)",
+    backgroundTrans: "rgba(40, 0, 3, 0)",
+    foreground: "#EDCCCE",
   },
   device: {
     mobileS: `(min-width: ${size.mobileS})`,

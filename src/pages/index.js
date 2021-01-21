@@ -9,10 +9,12 @@ import RedditIcon from "../images/svg/social/reddit.svg";
 import TelegramIcon from "../images/svg/social/telegram.svg";
 
 import Arrow from "../images/svg/arrow.svg";
-
-import Layout from "../components/Layout.js";
-import Jumbotron from "../components/Jumbotron.js";
 import Home from "../images/svg/home.svg";
+
+import Form from "../components/Form";
+import Jumbotron from "../components/Jumbotron.js";
+import Layout from "../components/Layout.js";
+
 
 const Button = styled.a`
   font-family: d0GBYTe, sans-serif;
@@ -52,6 +54,10 @@ const Container = styled.div`
 
   h2 {
     margin-bottom: 2rem;
+
+    // dirty anchor hack:
+    padding-top: 10rem;
+    margin-top: -10rem;
   }
 
   p {
@@ -223,26 +229,7 @@ const IndexPage = () => (
           </p>
         </div>
         <div className="flex-3 second-col">
-          <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Message: <textarea name="message"></textarea>
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
+          <Form />
         </div>
       </div>
     </Container>

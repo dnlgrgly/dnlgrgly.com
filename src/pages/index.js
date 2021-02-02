@@ -136,16 +136,16 @@ const IndexPage = () => (
             computers since a very young age, and ever since then, my whole life
             has been revoling around IT. I've started writing a tech blog and
             creating games for fun in the end of middle school. I've started an
-            IT high school in Budapest, far away from my home town, Miskolc.
-            Ever since that, one thing has been happening after another, and I'm
-            working as a full-stack engineer.{" "}
+            IT high school far away from home town, in the beating heart of
+            Hungary: Budapest. Then shit happened, and I’ve been working as a
+            full-stack software engineer ever since.{" "}
             <span role="img" aria-label="graduation cap emoji">
               🎓
             </span>
             <br />
-            <br />I love working on extraordinary and non-usual projects, and
-            I'm a very motivated learner. I craft designs with Adobe XD, mobile
-            apps with Flutter and React-Native, websites with React and Gatsby,
+            <br />I love working on extraordinary and unusual projects, and I'm
+            a very motivated learner. I craft designs with Adobe XD, mobile apps
+            with Flutter and React-Native, websites with React and Gatsby,
             backends with Node.JS, REST, GraphQL and mongoDB. I host them on
             Heroku, GCP, AWS, Netlify, or whatever comes to mind. Oh, and I'm
             also learning Python.{" "}

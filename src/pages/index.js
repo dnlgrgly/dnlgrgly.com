@@ -114,7 +114,7 @@ const IndexPage = () => (
     <Jumbotron
       leftColumn={
         <h1>
-          AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA<i>-ish</i>
+          full-stack web and mobile engineer + designer<i>-ish</i>
         </h1>
       }
       rightColumn={<Home alt="developer icon" />}

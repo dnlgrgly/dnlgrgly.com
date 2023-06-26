@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import Heart from "../images/svg/heart.svg";
@@ -65,63 +65,55 @@ const FormWrapper = styled.form`
   }
 `;
 
-class Form extends Component {
-  state = {
-    hasSubmitted: false,
-  };
+const Form = () => {
+  const [hasSubmitted, setHasSubmitted] = useState(false);
 
-  render() {
-    const { hasSubmitted } = this.state;
-
-    return (
-      <FormWrapper
-        name="Contact Form"
-        method="POST"
-        data-netlify="true"
-        action="/thanks"
-      >
+  return (
+    <FormWrapper
+      name="Contact Form"
+      method="POST"
+      data-netlify="true"
+      action="/thanks"
+    >
+      <div>
+        <label>
+          Your Name:{" "}
+          <input type="text" name="name" placeholder="Richard Hendricks" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Your Email:{" "}
+          <input type="email" name="email" placeholder="ceo@piedpiper.com" />
+        </label>
+      </div>
+      <div>
+        <label>
+          Message:{" "}
+          <textarea
+            name="message"
+            placeholder="Hello Daniel, I've got an awesome opportunity waiting just for you in our SF office..."
+          />
+        </label>
+      </div>
+      {!hasSubmitted ? (
         <div>
-          <label>
-            Your Name:{" "}
-            <input type="text" name="name" placeholder="Richard Hendricks" />
-          </label>
+          <button
+            id="button"
+            type="submit"
+            onClick={() => setHasSubmitted(true)}
+          >
+            Send message
+          </button>
         </div>
-        <div>
-          <label>
-            Your Email:{" "}
-            <input type="email" name="email" placeholder="ceo@piedpiper.com" />
-          </label>
+      ) : (
+        <div className="thanks-container">
+          <Heart />
+          <p>Thank you for contacting me. I'll get back to you ASAP.</p>
         </div>
-        <div>
-          <label>
-            Message:{" "}
-            <textarea
-              name="message"
-              placeholder="Hello Daniel, I've got an awesome opportunity waiting just for you in our SF office..."
-            />
-          </label>
-        </div>
-        {!hasSubmitted ? (
-          <div>
-            <button
-              id="button"
-              type="submit"
-              onClick={() => {
-                this.setState({ hasSubmitted: true });
-              }}
-            >
-              Send message
-            </button>
-          </div>
-        ) : (
-          <div className="thanks-container">
-            <Heart />
-            <p>Thank you for contacting me. I'll get back to you ASAP.</p>
-          </div>
-        )}
-      </FormWrapper>
-    );
-  }
-}
+      )}
+    </FormWrapper>
+  );
+};
 
 export default Form;

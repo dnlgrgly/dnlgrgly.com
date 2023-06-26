@@ -5,41 +5,16 @@ import me from "../images/me.jpg";
 
 import GitHubIcon from "../images/svg/social/github.svg";
 import LinkedInIcon from "../images/svg/social/linkedin.svg";
-import RedditIcon from "../images/svg/social/reddit.svg";
 import TelegramIcon from "../images/svg/social/telegram.svg";
 
 import Arrow from "../images/svg/arrow.svg";
 import Home from "../images/svg/home.svg";
 
+import Button from "../components/Button";
 import Form from "../components/Form";
 import Jumbotron from "../components/Jumbotron.js";
 import Layout from "../components/Layout.js";
-
-const Button = styled.a`
-  font-family: d0GBYTe, sans-serif;
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  padding: 0.5rem 1rem;
-  width: fit-content;
-  border-bottom: 2px solid ${(props) => props.theme.color[props.color]};
-  color: ${(props) => props.theme.color[`${props.color}Fg`]};
-
-  > * {
-    color: ${(props) => props.theme.color[`${props.color}Fg`]};
-  }
-
-  :hover {
-    color: white;
-    > * {
-      color: white;
-    }
-  }
-
-  svg {
-    height: 1rem;
-    margin-left: 1rem;
-  }
-`;
+import ModalCard from "../components/ModalCard";
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.color[`${props.color}Bg`]};
@@ -131,26 +106,14 @@ const IndexPage = () => (
             </span>
             <br />
             <br />
-            I'm Daniel Gergely. Part-time high-schooler, part-time software
-            engineer, full-time content creator. I've been interested in
-            computers since a very young age, and ever since then, my whole life
-            has been revoling around IT. I've started writing a tech blog and
-            creating games for fun in the end of middle school. I've started an
-            IT high school far away from home town, in the beating heart of
-            Hungary: Budapest. Then shit happened, and I’ve been working as a
-            full-stack software engineer ever since.{" "}
+            I'm Daniel Gergely, living in Amsterdam, The Netherlands. I've been
+            working as a software developer for over 5 years. On this website,
+            you'll find a scrappy overview of my sometimes useful, sometimes
+            unusual, but always well thought-out personal projects, dating back
+            to 2016. Back then, I was just 13 years old, so sometimes there's
+            only so much that's left from a project.{" "}
             <span role="img" aria-label="graduation cap emoji">
-              🎓
-            </span>
-            <br />
-            <br />I love working on extraordinary and unusual projects, and I'm
-            a very motivated learner. I craft designs with Adobe XD, mobile apps
-            with Flutter and React-Native, websites with React and Gatsby,
-            backends with Node.JS, REST, GraphQL and mongoDB. I host them on
-            Heroku, GCP, AWS, Netlify, or whatever comes to mind. Oh, and I'm
-            also learning Python.{" "}
-            <span role="img" aria-label="snake emoji">
-              🐍
+              👴⏳
             </span>
             <br />
             <br />
@@ -174,9 +137,6 @@ const IndexPage = () => (
             <a href="https://linkedin.com/in/dnlgrgly">
               <LinkedInIcon alt="linkedin icon" />
             </a>
-            <a href="https://reddit.com/u/dandesz198">
-              <RedditIcon alt="reddit icon" />
-            </a>
             <a href="https://t.me/dnlgrgly">
               <TelegramIcon alt="telegram icon" />
             </a>
@@ -188,26 +148,21 @@ const IndexPage = () => (
       <div className="dividor" />
       <h2 id="projects">projects</h2>
       <p>
-        Ranging from mobile, web and full-stack solutions, I've crafted several
-        out-of-this-world projects in my lifetime so far. Below, you can find
-        the projects I'm the proudest of.{" "}
+        Mobile apps? Check. Websites? Check. Designs? Check. Weird internet art?
+        You get the point.{" "}
         <span role="img" aria-label="heart emoji">
-          ❤️
+          ✅
         </span>
       </p>
+      <ModalCard />
     </Container>
     <Container color="yellow" className="padding">
       <div className="dividor" />
       <h2 id="articles">articles & tutorials</h2>
       <p>
-        "Give a man a fish, you feed a them for a day; teach a man to fish, you
-        feed them for a life." <br />
-        Giving back to the community is always an important part of the
-        developer lifestyle. And there's no better way to help out fellow
-        developers than teaching them, and letting them grow. By writing
-        articles, crafting open-source projects, or giving mind-blowing meetup
-        talks, I've always tried to be an active part of the community. Below, I
-        listed the resources I've created and I think are amazing.{" "}
+        I've wrote some articles and tutorial series about things that interest
+        me, and quite some articles were written about me and my projects. Here,
+        you'll find both, read on!{" "}
         <span role="img" aria-label="book emoji">
           📖
         </span>

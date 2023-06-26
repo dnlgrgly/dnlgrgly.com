@@ -151,20 +151,21 @@ const Layout = ({
       <Footer className="padding">
         <div className="flex-2">
           <LogoWhite alt="dnlgrgly logo" />
-          <b>Copyright 2021</b>
+          <b>Copyright 2023</b>
           <p>Dániel Gergely</p>
         </div>
         <div>
-          <h4>projects</h4>
+          <h4>top projects</h4>
           <Link to="/budipest">Budipest</Link>
           <Link href="/riddimfutar">RIDDIMFUTÁR</Link>
+          <Link href="/blinders">{"(color || shape)blinder"}</Link>
         </div>
         <div>
           <h4>social</h4>
           <a href="https://linkedin.com/in/dnlgrgly">LinkedIn</a>
           <a href="https://github.com/dnlgrgly">GitHub</a>
           <a href="https://t.me/dnlgrgly">Telegram</a>
-          <a href="mailto:dnlgrgly@gmail.com">email</a>
+          <a href="mailto:dnlgrgly@icloud.com">email</a>
         </div>
         <div>
           <h4>other</h4>
